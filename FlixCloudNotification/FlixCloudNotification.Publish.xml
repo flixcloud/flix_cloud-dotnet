@@ -1,0 +1,10 @@
+<publishData>
+  <publishTarget publishUrl="\\devserver\c$\inetpub\wwwroot\FlixCloud\">
+    <file relUrl="FlixCloudNotificationService.svc" publishTime="05/02/2009 01:21:35" />
+    <file relUrl="bin/FlixCloud.dll" publishTime="05/02/2009 02:18:06" />
+    <file relUrl="bin/FlixCloud.pdb" publishTime="05/02/2009 02:18:05" />
+    <file relUrl="bin/FlixCloudNotification.dll" publishTime="05/02/2009 02:18:06" />
+    <file relUrl="bin/FlixCloudNotification.pdb" publishTime="05/02/2009 02:18:06" />
+    <file relUrl="Web.config" publishTime="05/02/2009 01:27:33" />
+  </publishTarget>
+</publishData>

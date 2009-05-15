@@ -1,0 +1,14 @@
+D:\Projects\MyOwn\On2\Src\FlixCloud\FlixCloudNotification\bin\FlixCloudNotification.dll
+D:\Projects\MyOwn\On2\Src\FlixCloud\FlixCloudNotification\bin\FlixCloudNotification.pdb
+D:\Projects\MyOwn\On2\Src\FlixCloud\FlixCloudNotification\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\MyOwn\On2\Src\FlixCloud\FlixCloudNotification\obj\Debug\FlixCloudNotification.dll
+D:\Projects\MyOwn\On2\Src\FlixCloud\FlixCloudNotification\obj\Debug\FlixCloudNotification.pdb
+D:\Projects\MyOwn\On2\Src\FlixCloud\FlixCloudNotification\bin\FlixCloud.dll
+D:\Projects\MyOwn\On2\Src\FlixCloud\FlixCloudNotification\bin\FlixCloud.pdb
+D:\Projects\MyOwn\On2\Src\FlixCloudNotification\bin\FlixCloudNotification.dll
+D:\Projects\MyOwn\On2\Src\FlixCloudNotification\bin\FlixCloudNotification.pdb
+D:\Projects\MyOwn\On2\Src\FlixCloudNotification\bin\FlixCloud.dll
+D:\Projects\MyOwn\On2\Src\FlixCloudNotification\bin\FlixCloud.pdb
+D:\Projects\MyOwn\On2\Src\FlixCloudNotification\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\MyOwn\On2\Src\FlixCloudNotification\obj\Debug\FlixCloudNotification.dll
+D:\Projects\MyOwn\On2\Src\FlixCloudNotification\obj\Debug\FlixCloudNotification.pdb

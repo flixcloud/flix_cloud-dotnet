@@ -1,10 +1,10 @@
-Flix Cloud API Sample Python Library
+Flix Cloud API Sample .NET Library
 ====================================
 
-Version: 0.2  
-Date:    May 7, 2009
+Version: 0.1  
+Date:    May 6, 2009
 
-A sample Python client library for interacting with the [On2 Flix Cloud](http://flixcloud.com) API.
+A sample .NET client library for interacting with the [On2 Flix Cloud](http://flixcloud.com) API.
 
 See [http://flixcloud.com/api](http://flixcloud.com/api) for more details about the API.
 

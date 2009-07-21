@@ -55,6 +55,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client\ApiRequest.cs" />
+    <Compile Include="Client\FlixCloudException.cs" />
+    <Compile Include="Client\JobResponseError.cs" />
     <Compile Include="Client\FileLocations.cs" />
     <Compile Include="Client\FlixCloudClient.cs" />
     <Compile Include="Client\IFlixCloudClient.cs" />

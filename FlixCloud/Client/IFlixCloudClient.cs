@@ -18,6 +18,6 @@ namespace FlixCloud.Client
             ResponseFormat = WebMessageFormat.Xml,
             RequestFormat = WebMessageFormat.Xml,
             UriTemplate = "")]
-        JobResponse JobRequest(ApiRequest request);
+        object UntypedJobRequest(ApiRequest request);
     }
 }

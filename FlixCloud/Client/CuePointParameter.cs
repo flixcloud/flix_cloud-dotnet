@@ -8,10 +8,10 @@ using System.Xml;
 
 namespace FlixCloud.Client
 {
-    public class Parameters : IXmlSerializable
+    public class CuePointParameter : IXmlSerializable
     {
-        public string User { get; set; }
-        public string Password { get; set; }
+        public string Key { get; set; }
+        public string Value { get; set; }
 
         #region IXmlSerializable Members
 
@@ -23,15 +23,15 @@ namespace FlixCloud.Client
         public void ReadXml(XmlReader reader)
         {
             //This method is not implemented because
-            //this class is never deserialized by the client            
-
+            //this class is never deserialized by the client
+            
             throw new NotImplementedException();
         }
 
         public void WriteXml(XmlWriter writer)
         {
-            writer.WriteElementString("user", User);
-            writer.WriteElementString("password", Password);
+            writer.WriteElementString("key", Key);
+            writer.WriteElementString("value", Value);            
         }
 
         #endregion

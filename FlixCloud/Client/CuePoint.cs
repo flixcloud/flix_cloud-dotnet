@@ -8,15 +8,16 @@ using System.Xml;
 
 namespace FlixCloud.Client
 {
-    public class Location : IXmlSerializable
+    public class CuePoint: IXmlSerializable
     {
-        public Location()
+        public CuePoint()
         {
-            Parameters = new Parameters();
+            Parameters = new List<CuePointParameter>();
         }
 
-        public string Url { get; set; }
-        public Parameters Parameters { get; set; }
+        public string Name { get; set; }
+        public decimal Time  { get; set; }
+        public IList<CuePointParameter> Parameters { get; set; }
 
         #region IXmlSerializable Members
 
@@ -35,12 +36,15 @@ namespace FlixCloud.Client
 
         public void WriteXml(XmlWriter writer)
         {
-            writer.WriteElementString("url", Url);
+            writer.WriteElementString("name", Name);
+            writer.WriteStartElement("time");
+            writer.WriteValue(Time);
+            writer.WriteEndElement();
 
-            if (Parameters.User != null && Parameters.Password != null)
+            foreach (CuePointParameter parameter in Parameters)
             {
-                writer.WriteStartElement("parameters");
-                Parameters.WriteXml(writer);
+                writer.WriteStartElement("parameter");
+                parameter.WriteXml(writer);
                 writer.WriteEndElement();
             }
         }

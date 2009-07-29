@@ -10,12 +10,15 @@ using FlixCloud.Notification;
 
 namespace FlixCloudNotification
 {
+    /// <summary>
+    /// Sample service that demonstrates how to handle the notifications send by FlixCloud
+    /// </summary>
     public class FlixCloudNotificationService : IFlixCloudNotification
     {
         public void OnNotify(JobNotification notification)
         {
             string fileName = @"c:\inetpub\ftproot\Pub\" +
-                DateTime.Now.ToString("yyyy-MM-dd_hh-mm-ss-tt") + ".xml";
+                DateTime.Now.ToString("yyyy-MM-dd_hh-mm-ss") + ".xml";
             using (FileStream fs = new FileStream(fileName, FileMode.Create))
             using (XmlDictionaryWriter writer = XmlDictionaryWriter.CreateTextWriter(fs))
             {

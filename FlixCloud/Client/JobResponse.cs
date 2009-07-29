@@ -11,9 +11,9 @@ namespace FlixCloud.Client
     public class JobResponse
     {
         [XmlElement(ElementName = "id")]
-        public int Id;
+        public int Id { get; set; }
 
         [XmlElement(ElementName = "initialized-job-at")]
-        public DateTime InitializedAt;
+        public DateTime InitializedAt { get; set; }
     }
 }

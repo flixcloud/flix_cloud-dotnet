@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.ServiceModel;
+using System.Net;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace FlixCloud.Client
 {
@@ -48,6 +53,24 @@ namespace FlixCloud.Client
             else
             {
                 throw new FlixCloudException("Unknown job response type");
+            }
+        }
+
+        public JobStatus GetJobStatus(string apiKey, int jobId)
+        {
+            HttpWebRequest request = WebRequest.Create(
+                "https://www.flixcloud.com/jobs/" + jobId.ToString() + "/status") as HttpWebRequest;
+            request.ContentType = "application/xml";
+            request.Accept = "application/xml";
+            request.Credentials = new NetworkCredential("dotNETClient", apiKey);
+
+            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(JobStatus));
+                using (StringWriter writer = new StringWriter())
+                {
+                    return serializer.Deserialize(response.GetResponseStream()) as JobStatus;
+                }
             }
         }
     }

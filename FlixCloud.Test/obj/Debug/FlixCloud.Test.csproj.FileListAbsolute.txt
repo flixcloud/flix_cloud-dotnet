@@ -1,0 +1,7 @@
+D:\Projects\MyOwn\On2\Src\FlixCloud.Test\bin\Debug\FlixCloud.Test.dll
+D:\Projects\MyOwn\On2\Src\FlixCloud.Test\bin\Debug\FlixCloud.Test.pdb
+D:\Projects\MyOwn\On2\Src\FlixCloud.Test\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\MyOwn\On2\Src\FlixCloud.Test\obj\Debug\FlixCloud.Test.dll
+D:\Projects\MyOwn\On2\Src\FlixCloud.Test\obj\Debug\FlixCloud.Test.pdb
+D:\Projects\MyOwn\On2\Src\FlixCloud.Test\bin\Debug\FlixCloud.dll
+D:\Projects\MyOwn\On2\Src\FlixCloud.Test\bin\Debug\FlixCloud.pdb

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
+using System.Xml.Schema;
+using System.Xml;
 
 namespace FlixCloud.Client
 {
@@ -13,20 +15,22 @@ namespace FlixCloud.Client
             Input = new Location();
             Output = new Location();
             Watermark = new Location();
+            Thumbnails = new Thumbnails();
         }
 
-        public Location Input;
-        public Location Output;
-        public Location Watermark;
+        public Location Input { get; set; }
+        public Location Output { get; set; }
+        public Location Watermark { get; set; }
+        public Thumbnails Thumbnails { get; set; }
 
         #region IXmlSerializable Members
 
-        public System.Xml.Schema.XmlSchema GetSchema()
+        public XmlSchema GetSchema()
         {
             return null;
         }
 
-        public void ReadXml(System.Xml.XmlReader reader)
+        public void ReadXml(XmlReader reader)
         {
             //This method is not implemented because
             //this class is never deserialized by the client
@@ -34,7 +38,7 @@ namespace FlixCloud.Client
             throw new NotImplementedException();
         }
 
-        public void WriteXml(System.Xml.XmlWriter writer)
+        public void WriteXml(XmlWriter writer)
         {
             writer.WriteStartElement("input");
             Input.WriteXml(writer);
@@ -48,6 +52,13 @@ namespace FlixCloud.Client
             {
                 writer.WriteStartElement("watermark");
                 Watermark.WriteXml(writer);
+                writer.WriteEndElement();
+            }
+
+            if (Thumbnails.Url != null)
+            {
+                writer.WriteStartElement("thumbnails");
+                Thumbnails.WriteXml(writer);
                 writer.WriteEndElement();
             }
         }

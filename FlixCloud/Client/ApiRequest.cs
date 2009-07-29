@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
+using System.Xml.Schema;
+using System.Xml;
 
 namespace FlixCloud.Client
 {
@@ -12,21 +14,25 @@ namespace FlixCloud.Client
         public ApiRequest()
         {
             Locations = new FileLocations();
+            CuePoints = new CuePoints();
         }
 
-        public string ApiKey;
-        public int? RecipeID;
-        public string RecipeName;
-        public FileLocations Locations;
+        public string ApiKey { get; set; }
+        public int? RecipeID { get; set; }
+        public string RecipeName { get; set; }
+        public string NotificationUrl { get; set; }
+        public string PassThrough { get; set; }
+        public FileLocations Locations { get; set; }
+        public CuePoints CuePoints { get; set; }
 
         #region IXmlSerializable Members
 
-        public System.Xml.Schema.XmlSchema GetSchema()
+        public XmlSchema GetSchema()
         {
             return null;
         }
 
-        public void ReadXml(System.Xml.XmlReader reader)
+        public void ReadXml(XmlReader reader)
         {
             //This method is not implemented because
             //this class is never deserialized by the client
@@ -34,7 +40,7 @@ namespace FlixCloud.Client
             throw new NotImplementedException();
         }
 
-        public void WriteXml(System.Xml.XmlWriter writer)
+        public void WriteXml(XmlWriter writer)
         {
             writer.WriteElementString("api-key", ApiKey);
 
@@ -45,6 +51,20 @@ namespace FlixCloud.Client
             if (RecipeName != null)
             {
                 writer.WriteElementString("recipe-name", RecipeName);
+            }
+            if (NotificationUrl != null)
+            {
+                writer.WriteElementString("notification-url", NotificationUrl);
+            }
+            if (PassThrough != null)
+            {
+                writer.WriteElementString("pass-through", PassThrough);
+            }
+            if (CuePoints.Event.Count > 0 || CuePoints.Navigation.Count > 0)
+            {
+                writer.WriteStartElement("cue-points");
+                CuePoints.WriteXml(writer);
+                writer.WriteEndElement();
             }
 
             writer.WriteStartElement("file-locations");

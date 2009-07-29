@@ -12,6 +12,6 @@ namespace FlixCloud.Client
     {
         //[XmlArrayItemAttribute(ElementName = "error", IsNullable = false)]
         [XmlElement(ElementName = "error")]
-        public string[] Message;
+        public string[] Message { get; set; }
     }
 }

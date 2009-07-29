@@ -55,14 +55,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client\ApiRequest.cs" />
+    <Compile Include="Client\CuePoint.cs" />
+    <Compile Include="Client\CuePointParameter.cs" />
+    <Compile Include="Client\CuePoints.cs" />
     <Compile Include="Client\FlixCloudException.cs" />
     <Compile Include="Client\JobResponseError.cs" />
     <Compile Include="Client\FileLocations.cs" />
     <Compile Include="Client\FlixCloudClient.cs" />
     <Compile Include="Client\IFlixCloudClient.cs" />
     <Compile Include="Client\JobResponse.cs" />
+    <Compile Include="Client\JobStatus.cs" />
     <Compile Include="Client\Location.cs" />
     <Compile Include="Client\Parameters.cs" />
+    <Compile Include="Client\TaskStatus.cs" />
+    <Compile Include="Client\Thumbnails.cs" />
+    <Compile Include="Helper.cs" />
     <Compile Include="Notification\IFlixCloudNotification.cs" />
     <Compile Include="Notification\JobNotification.cs" />
     <Compile Include="Notification\MediaFile.cs" />

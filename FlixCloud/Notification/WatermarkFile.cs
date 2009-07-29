@@ -13,7 +13,15 @@ namespace FlixCloud.Notification
         public string Url;
 
         [DataMember(Name = "size", Order = 2)]
-        public int Size;
+        public string mSize;
+        
+        public Int64? Size
+        {
+            get
+            {
+                return Helper.ConvertInt64(mSize);
+            }
+        }
 
         [DataMember(Name = "cost", Order = 3)]
         public int Cost;

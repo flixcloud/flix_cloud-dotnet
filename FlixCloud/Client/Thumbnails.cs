@@ -8,14 +8,15 @@ using System.Xml;
 
 namespace FlixCloud.Client
 {
-    public class Location : IXmlSerializable
+    public class Thumbnails : IXmlSerializable
     {
-        public Location()
+        public Thumbnails()
         {
             Parameters = new Parameters();
         }
 
         public string Url { get; set; }
+        public string Prefix { get; set; }
         public Parameters Parameters { get; set; }
 
         #region IXmlSerializable Members
@@ -36,6 +37,7 @@ namespace FlixCloud.Client
         public void WriteXml(XmlWriter writer)
         {
             writer.WriteElementString("url", Url);
+            writer.WriteElementString("prefix", Prefix);
 
             if (Parameters.User != null && Parameters.Password != null)
             {

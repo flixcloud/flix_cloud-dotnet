@@ -13,16 +13,48 @@ namespace FlixCloud.Notification
         public string Url;
 
         [DataMember(Name = "width", Order = 2)]
-        public int Width;
+        private string mWidth = null;
+
+        public int? Width
+        {
+            get
+            {
+                return Helper.ConvertInt32(mWidth);
+            }
+        }
 
         [DataMember(Name = "height", Order = 3)]
-        public int Height;
+        private string mHeight = null;
+
+        public int? Height
+        {
+            get
+            {
+                return Helper.ConvertInt32(mHeight);
+            }
+        }
 
         [DataMember(Name = "size", Order = 4)]
-        public int Size;
+        private string mSize = null;
+
+        public Int64? Size
+        {
+            get
+            {
+                return Helper.ConvertInt64(mSize);
+            }
+        }
 
         [DataMember(Name = "duration", Order = 5)]
-        public int Duration;
+        private string mDuration = null;
+
+        public int? Duration
+        {
+            get
+            {
+                return Helper.ConvertInt32(mDuration);
+            }
+        }
 
         [DataMember(Name = "cost", Order = 6)]
         public int Cost;

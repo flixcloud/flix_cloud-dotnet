@@ -19,5 +19,7 @@ namespace FlixCloud.Client
             RequestFormat = WebMessageFormat.Xml,
             UriTemplate = "")]
         object UntypedJobRequest(ApiRequest request);
+
+        JobStatus GetJobStatus(string apiKey, int jobId);
     }
 }
